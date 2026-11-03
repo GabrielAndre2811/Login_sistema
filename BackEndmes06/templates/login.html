@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card shadow mt-5">
+
+                <div class="card-body p-4">
+
+                    <h1 class="text-center mb-4">
+                        Página de Login
+                    </h1>
+
+                    <form action="{{ url_for('user.acesso') }}" method="POST">
+
+                        <div class="mb-3">
+                            <label for="login" class="form-label">
+                                Digite seu login
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="login"
+                                name="login"
+                                placeholder="Digite seu login"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="senha" class="form-label">
+                                Digite sua senha
+                            </label>
+
+                            <input
+                                type="password"
+                                class="form-control"
+                                id="senha"
+                                name="senha"
+                                placeholder="Digite sua senha"
+                                required>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                Entrar
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

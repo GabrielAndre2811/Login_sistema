@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% block title %}Cadastro{% endblock %}
+    <h1>Cadastro</h1>
+    <p>Complete o formulário para se cadastrar.</p>
+    <form action="" method="post">
+        
+        <label for="name">Nome:</label><br>
+        <input type="text" id="name" name="nome" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone"><br><br>
+
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha" required><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+{% endblock %}
